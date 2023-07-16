@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <dl>
+    {% for item in news['news'] %}
+        <dt><b>{{ item['title'] }}</b></dt>
+        <dd>{{ item['content'] }}</dd>
+    {% endfor %}
+    </dl>
+
+    <br><a href="/index">Назад</a>
+{% endblock %}

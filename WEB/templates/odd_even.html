@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <br><!--Jinja-->
+
+    {% if number % 2 == 0 %}
+        <div>{{ number }} - чётное!</div>
+    {% else %}
+        <div>{{ number }} - нечётное!</div>
+    {% endif %}
+
+    <br><a href="/index">Назад</a>
+{% endblock %}

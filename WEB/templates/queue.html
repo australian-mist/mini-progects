@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h1>Кто последний?</h1>
+    {% set lst = ['Tom', 'Bob', 'Tim', 'Sam'] %}
+    <ul>
+        {% for user in lst %}
+            <li>
+                {{ loop.index }} - {{ user }}
+                {% if loop.first %} - первый
+                {% elif loop.last %} - последний
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+
+    <br><a href="/index">Назад</a>
+{% endblock %}

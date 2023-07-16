@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <form class="login_form" method="post" enctype="multipart/form-data">
+
+        <input type="text" class="form-control" name="fname" placeholder="Фамилия"><br>
+        <input type="text" class="form-control" name="sname" placeholder="Имя"><br>
+        <input type="email" class="form-control" name="email" placeholder="e-mail"><br>
+        <input type="password" class="form-control" name="password" placeholder="password"><br>
+
+        <div class="form-group">
+            <label for="classSelect">Образование</label>
+            <select class="form-control" id="classSelect" name="profession">
+                <option>Высшее</option>
+                <option>Среднее</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="form-check">Пол</label>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="male" value="male" checked>
+                <label class="form-check-label" for="male">М</label>
+            </div>
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="sex" id="female" value="female">
+                <label class="form-check-label" for="female">Ж</label>
+            </div>
+        </div>
+
+        <div>
+            <label for="about">Немного о себе</label>
+            <textarea class="form-control" id="about" name="about" rows="3"></textarea>
+        </div><br>
+
+<!--        <div class="form-group">-->
+<!--            <label for="photo">Фото</label>-->
+<!--            <input type="static" class="form-control-static" id="photo" name="static">-->
+<!--        </div>-->
+
+        <div class="form-group form-check">
+            <input type="checkbox" class="form-check-input" id="ready" name="ready">
+            <label class="form-check-label" for="ready">Пользовательское соглашение</label>
+        </div><br>
+
+        <button type="submit" class="btn btn-primary">Отправить</button>
+
+    </form>
+
+    <br><a href="/index">Назад</a><br><br>
+{% endblock %}

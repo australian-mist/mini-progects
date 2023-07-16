@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 align="center">Ваши данные</h1>
+<!--    <img src="../static/img/loaded.png" alt="Фото"><br>-->
+
+    {% set lst = ['Фамилия', 'Имя', 'E-mail', 'Пароль', 'Образование', 'Пол', 'О себе'] %}
+
+    {% for value in data.values() %}
+        {{ lst[loop.index0] }} - {{value}}<br>
+    {% endfor %}
+
+    <br><a href="/form">Назад</a>
+{% endblock %}
